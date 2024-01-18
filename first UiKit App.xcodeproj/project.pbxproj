@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C2DE0682B57002200D128F3 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DE0672B57002200D128F3 /* SignUpViewController.swift */; };
+		7C2DE06A2B57002C00D128F3 /* SignUpViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2DE0692B57002C00D128F3 /* SignUpViewController2.swift */; };
 		E0F70B4E2B55DFC90037BB32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F70B4D2B55DFC90037BB32 /* AppDelegate.swift */; };
 		E0F70B502B55DFC90037BB32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F70B4F2B55DFC90037BB32 /* SceneDelegate.swift */; };
 		E0F70B522B55DFC90037BB32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F70B512B55DFC90037BB32 /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7C2DE0672B57002200D128F3 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		7C2DE0692B57002C00D128F3 /* SignUpViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController2.swift; sourceTree = "<group>"; };
 		E0F70B4A2B55DFC90037BB32 /* first UiKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "first UiKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F70B4D2B55DFC90037BB32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0F70B4F2B55DFC90037BB32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				E0F70B562B55DFCA0037BB32 /* Assets.xcassets */,
 				E0F70B582B55DFCA0037BB32 /* LaunchScreen.storyboard */,
 				E0F70B5B2B55DFCA0037BB32 /* Info.plist */,
+				7C2DE0672B57002200D128F3 /* SignUpViewController.swift */,
+				7C2DE0692B57002C00D128F3 /* SignUpViewController2.swift */,
 			);
 			path = "first UiKit App";
 			sourceTree = "<group>";
@@ -259,7 +265,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0F70B522B55DFC90037BB32 /* ViewController.swift in Sources */,
+				7C2DE06A2B57002C00D128F3 /* SignUpViewController2.swift in Sources */,
 				E0F70B4E2B55DFC90037BB32 /* AppDelegate.swift in Sources */,
+				7C2DE0682B57002200D128F3 /* SignUpViewController.swift in Sources */,
 				E0F70B502B55DFC90037BB32 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +450,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQ9C8DDDHC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "first UiKit App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -449,6 +458,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,6 +479,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RQ9C8DDDHC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "first UiKit App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -476,6 +487,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

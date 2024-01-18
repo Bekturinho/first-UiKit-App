@@ -32,32 +32,22 @@ class ViewController: UIViewController{
     @IBOutlet weak var eyeButtonOutlet: UIButton!
     
     
-    @IBAction func signInButton(_ sender: Any) {
-        let email = emailTextField.text ?? ""
-        let password = passwordsTextField.text ?? ""
-        let isEmailValid = email.contains("@") && email.count > 5 && email.contains(".")
-        let isPasswordValid = password.contains(where: {$0.isLowercase}) && password.count > 5 && password.contains(where: {$0.isNumber})
-        
-        if isEmailValid && isPasswordValid{
-            emailTextField.layer.borderColor = UIColor.green.cgColor
-            passwordsTextField.layer.borderColor = UIColor.green.cgColor
-        }else{
-            emailTextField.layer.borderColor = UIColor.red.cgColor
-            passwordsTextField.layer.borderColor = UIColor.red.cgColor
-        }
-        
-    }
+
     
+    @IBAction func signInButton(_ sender: Any) {
+        updateEmailAndPasswordTextFields()
+    }
     
     @IBAction func googleButton(_ sender: Any) {
-        print("Пользователь использовал почту Google")
+        updateEmailAndPasswordTextFields()
     }
+    
     @IBAction func facebookButton(_ sender: Any) {
-        print("Пользователь использовал почту Facebook")
+        updateEmailAndPasswordTextFields()
     }
     
     @IBAction func twitterButton(_ sender: Any) {
-        print("Пользователь использовал почту Twitter")
+        updateEmailAndPasswordTextFields()
     }
     
     
@@ -65,36 +55,54 @@ class ViewController: UIViewController{
         print("Пользователь с почтой \(emailTextField.text) хочет зарегистрироваться")
     }
     
+    
+    @IBAction func eyeButtonTapped(_ sender: Any) {
+        passwordsTextField.isSecureTextEntry.toggle()
+    }
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        
-//        При нажатии на кнопку Sign In, или кнопку любой из соц.сетей происходит следующая проверка на почту и пароль:
-//
-//        1) Если почта содержит символ "@" и точку, и длина почты больше 5 символов – границу вокруг текстфилда для почты делать зеленой.
-//        Если нет – границу вокруг текстфилда для почты делать зеленой.
-//
-//        2) Если пароль содержит больше 5 символов, содержит цифры, и первый символ в пароле является буквой с нижнего регистра (isLowercased),  то  границу вокруг текстфилда для пароля делать зеленой.
-//
-//        Если нет –  границу вокруг текстфилда для пароля делать красной.
-//
-////        При нажатии на кнопку Sign Up, выводить в консоль пользователь с такой-то почтой зарегистрироваться
-   
+      
         
         emailTextField.layer.borderWidth = 1
         passwordsTextField.layer.borderWidth = 1
         emailTextField.layer.cornerRadius = 8
         passwordsTextField.layer.cornerRadius = 8
         eyeButtonOutlet.setTitle("", for: .normal)
-        
-        
-        
-        
-        
     }
     
+    func updateEmailAndPasswordTextFields() {
+        updateEmailTextField()
+        updatePasswordTextField()
+    }
+    
+    func updateEmailTextField() {
+        let email = emailTextField.text ?? ""
+        let isEmailValid = email.contains("@") && email.count > 5 && email.contains(".")
+        
+        if isEmailValid {
+            emailTextField.layer.borderColor = UIColor.green.cgColor
+        } else {
+            emailTextField.layer.borderColor = UIColor.red.cgColor
+        }
+    }
+    
+    func updatePasswordTextField() {
+        let password = passwordsTextField.text ?? ""
+        let firstSymbol = password.first ?? Character(" ")
+        let isPasswordValid = firstSymbol.isLetter && firstSymbol.isLowercase && password.count > 5 && password.contains(where: {$0.isNumber})
+        
+        if isPasswordValid {
+            passwordsTextField.layer.borderColor = UIColor.green.cgColor
+        } else {
+            passwordsTextField.layer.borderColor = UIColor.red.cgColor
+        }
+    }
+    
+    
+    // DRY – Don't Repeat Yourself
+    // Single Responsibility
 
     @IBAction func showPasswword(_ sender: Any) {
         passwordsTextField.isSecureTextEntry.toggle()
